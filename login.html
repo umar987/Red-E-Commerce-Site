@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="login.css  ">
+    <title>All Products | Ecommerce Website </title>
+</head>
+
+<body>
+    <main>
+        <div class="header-section ">
+            <header>
+                <div class="header">
+                    <div class="logo">
+                        <img src="./images/logo.png" alt="">
+                    </div>
+                    <div class="head-links">
+                        <ul id="MenuItems">
+                            <li>
+                                <a href="index.html">Home</a>
+                                <a href="product.html">Products</a>
+                                <a href="#">About</a>
+                                <a href="#">Contact</a>
+                                <a href="login.html">Account</a>
+                                <a href="cart.html"><img src="./images/cart.png" alt=""></a>
+
+                            </li>
+                        </ul>
+                        <div class="menu-bar">
+                            <img src="./images/cart.png" alt="">
+                            <img src="./images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+        </div>
+
+        <div class="main-section">
+            <div class="login-section">
+                <div class="l-section">
+                    <div class="l-left">
+                        <img src="./images/image1.png" alt="">
+                    </div>
+                    <div class="l-right">
+                        <div class="form-box">
+                            <div class="form-btn">
+                                <span onclick="login()">Login</span>
+                                <span onclick="register()">Register</span>
+                                <hr id="Indicator">
+                            </div>
+                            <form action="#" id="LoginForm">
+                                <input type="text" placeholder="Username" id="username">
+                                <input type="password" placeholder="Password" id="password">
+                                <button type="submit" class="submit-btn" onclick="func()">Login</button>
+                                <a href="#">Forgot Password</a>
+                            </form>
+                            <form action="#" id="RegForm">
+                                <input type="text" placeholder="Username">
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="submit-btn">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer">
+
+                    <div class="col-1">
+                        <h2>Download Our App</h2>
+                        <br>
+                        <div class="grey-1">
+                            <p>Download App For Android And ios Mobile Phone.</p>
+                        </div>
+                        <br>
+                        <div class="app">
+                            <div class="img">
+                                <img src="./images/play-store.png" alt="">
+                            </div>
+                            <div class="img">
+                                <img src="./images/app-store.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-2">
+                        <div class="img">
+                            <img src="./images/logo-white.png" alt="">
+                        </div>
+                        <br>
+                        <div class="grey-1">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos est distinctio dignissimos
+                                earum pariatur error!</p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h2>Useful Links</h2>
+                        <div class="u-f-links">
+                            <a href="#">Coupons</a>
+                            <a href="#">Blog Post</a>
+                            <a href="#">Return Policy</a>
+                            <a href="#">Join Affiliate</a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h2>Follow Us</h2>
+                        <div class="u-f-links">
+                            <a href="#">Facebook</a>
+                            <a href="#">Twitter</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">Youtube</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border"></div>
+                <div class="copy">
+                    <p>Copy Right 2023 - All Rights Reserved</p>
+                    <h2>Design By <a href="https://umararif.surge.sh" target="_blank">Muhammad Umar <i
+                                class="fa-solid fa-arrow-right-long"></i></a> </h2>
+                </div>
+            </footer>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/d5ccb4fd49.js" crossorigin="anonymous"></script>
+<script>
+    function func() {       
+        let pass = document.getElementById("password").value;
+        let email = document.getElementById("username").value;
+    if (email == 'umar123@gmail.com' && pass == '123987') {
+        // alert("You are logged in!");
+        window.location.assign("index.html");
+    }
+    
+    else if (email == 'usman123@gmail.com' && pass == '123') {
+        window.location.assign("index.html");
+    }
+    
+    else if (email == 'abubakar123@gmail.com' && pass == 'chella') {
+        window.location.assign("index.html");
+    }
+    else {
+        alert("Invalid username or password!");
+    }
+    document.getElementById("LoginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+     // Prevent default form submission
+    func(); ;// Call your login function
+});
+
+}
+
+
+
+    let MenuItems = document.getElementById("MenuItems");
+MenuItems.style.maxHeight = "0px";
+
+function menutoggle() {
+    if (MenuItems.style.maxHeight === "0px") {
+        MenuItems.style.maxHeight = "210px";
+    } else {
+        MenuItems.style.maxHeight = "0px";
+    }
+}
+
+
+    let LoginForm = document.getElementById("LoginForm");
+let RegForm = document.getElementById("RegForm");
+let Indicator = document.getElementById("Indicator");
+
+function register() {
+    RegForm.style.transform = "translateX(0px)";
+    LoginForm.style.transform = "translateX(0px)";
+    Indicator.style.transform = "translateX(100px)";
+}
+
+function login() {
+    RegForm.style.transform = "translateX(300px)";
+    LoginForm.style.transform = "translateX(300px)";
+    Indicator.style.transform = "translateX(0px)";
+}
+
+</script>
+</body>
+
+</html>

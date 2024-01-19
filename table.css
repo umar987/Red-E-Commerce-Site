@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Open+Sans:wght@400;700&family=Raleway&family=Roboto:wght@400;500&family=Ruslan+Display&display=swap');
+
+
+:root {
+    --orange-color: #ff523b;
+}
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+.table-container{
+    width: 80%;
+    margin: 80px auto;
+}
+.table-container table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-container table th{
+    text-align: left;
+    padding: 10px;
+    color: white;
+    background-color: #ff523b;
+    font-weight: normal;
+}
+.table-container table td{
+    padding: 10px 0;
+}
+.table-container table td input{
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    outline: 0;
+}
+.table-container .cart-info img{
+    height: 100px;
+    width: 100px;
+}
+.table-container .cart-info{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.table-container .cart-info small{
+    margin: 10px 0px;
+    display: block;
+}
+.table-container .cart-info .info{
+    padding-left: 10px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+.table-container .cart-info .info a{
+    color: #ff523b;
+    font-size: 12px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid #ff523b;
+    width: 100%;
+    max-width: 435px;
+}
+th,td:last-child{
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:895px){
+.table-container{
+    width: 92%;
+}
+}
+@media only screen and (max-width:310px){
+    .table-container .cart-info img{
+        height: 75px;
+        width: 80px;
+    }
+    .table-container .info p{
+        display: none;
+    }
+    .table-container img{
+        padding-right: 6px;
+    }
+}
+@media only screen and (max-width:420px){
+    .table-container .cart-info .info{
+        padding-left: 0px;
+        padding-right: 5px;
+    }
+}
+@media only screen and (max-width:438px){
+    .table-container .cart-info .info{
+        /* padding-left: 0px; */
+        font-weight: 600;
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+    }
+}

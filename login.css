@@ -29,6 +29,7 @@ padding: 50px 0px;
      width: 80%;
     margin: auto;
     flex-wrap: wrap;
+    min-height: 100vh;
 }
  .l-left,.form-box {
     flex-basis: 50%;
@@ -128,6 +129,7 @@ transition: transform 1s;
 @media only screen and (max-width:235px){
     .form-box{
         width: 180px !important;
+        
     }
 }
 @media only screen and (max-width:340px){
@@ -138,6 +140,7 @@ transition: transform 1s;
         padding: 0px 7px;
     }
     .form-box form{
+        width: 100%;
         padding: 0px 10px;    
         }
         .form-btn span{

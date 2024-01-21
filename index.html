@@ -49,11 +49,19 @@
 
         <div class="main-section">
             <div class="login-section">
-                <div class="l-section">
-                    <div class="l-left">
-                        <img src="./images/image1.png" alt="">
-                    </div>
+                <div class="heading">
+                    <h1>Please Login </h1>
+                    <br>
+                    <span style="display: inline-block; font-weight: 600; font-size: 35px;">Email:</span>
+                    <h3 style="display: inline-block;">abc@gmail.com</h3>
+                    <br>
+                    <span style="display: inline-block; font-weight: 600; font-size: 35px;">Password:</span>
+                    <h3 style="display: inline-block;">abc</h3>
+                </div>
+                <div class="l-section">                   
                     <div class="l-right">
+                        <br>
+                        <br>
                         <div class="form-box">
                             <div class="form-btn">
                                 <span onclick="login()">Login</span>
@@ -72,6 +80,9 @@
                                 <button type="submit" class="submit-btn">Register</button>
                             </form>
                         </div>
+                    </div>
+                    <div class="l-left">
+                        <img src="./images/image1.png" alt="">
                     </div>
                 </div>
             </div>
@@ -145,6 +156,9 @@
     }
     
     else if (email == 'usman123@gmail.com' && pass == '123') {
+        window.location.assign("home.html");
+    }
+    else if (email == 'abc@gmail.com' && pass == 'abc') {
         window.location.assign("home.html");
     }
     
